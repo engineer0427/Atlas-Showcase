@@ -28,8 +28,8 @@
 ## 🛠️ 기술 방법론 및 인프라 아키텍처 (Technical Methodology)
 
 ### 1. CS-Driven Technical Challenges (컴퓨터 과학 기반 최적화)
-- **Vector Indexing & Semantic Search (\(O(\log N)\)):**
-  `pgvector`와 `IVFFlat/HNSW` 인덱싱 기법을 물리적으로 튜닝·적용하여 대규모 임베딩 데이터셋 환경에서도 엄격한 \(O(\log N)\) 수준의 저지연(Low-latency) 검색 속도를 실증했습니다.
+- **Vector Indexing & Semantic Search ($O(\log N)$):**
+  `pgvector`와 `IVFFlat/HNSW` 인덱싱 기법을 물리적으로 튜닝·적용하여 대규모 임베딩 데이터셋 환경에서도 엄격한 $O(\log N)$ 수준의 저지연(Low-latency) 검색 속도를 실증했습니다.
 - **Bridge Score Algorithm (자체 개발 가속):**
   도메인 간 유사도를 초고속으로 계산하기 위해 코사인 유사도(Cosine Similarity)와 자체 개발한 휴리스틱(Heuristic) 가중치 로직을 결합, 복잡계 데이터 공간 내부의 최단 연결 경로(The Missing Link)를 실시간 추적합니다.
 - **High-Dimensional Visualization:**
@@ -48,16 +48,22 @@
 ## 🏗️ System Architecture (3-Tier Layer)
 ```text
 Presentation Layer (Next.js / React, SSR Hydration Consistency 사수)
-       ↓
+        ↓
 Application Layer (FastAPI / Python, 비동기 async/await 파이프라인)
-       ↓
+        ↓
 Data Persistence Layer (Neon DB / pgvector, 하이브리드 고밀도 저장소)
 ```
 
----
+## 🔒 Security & Proprietary Infrastructure Policy
+**본 레포지토리는 Atlas SaaS의 개념 증명용 쇼케이스 환경입니다.** 
+실제 글로벌 엔터프라이즈 환경에서 가동 중인 **핵심 분석 커널 및 라이선싱 연동 서버 코드**는 란더(Landauer)의 폐쇄형 보안 인프라 내에서 엄격하게 관리되고 있습니다.
+
+- **원천 기술 보호:** 플랫폼 내에서 동작하는 핵심 연산 엔진 및 임베딩 파이프라인의 알고리즘은 런타임 환경에서 암호화되어 호출됩니다.
+- **역공학 방지:** 당사의 엔터프라이즈 API는 무단 역공학 방지를 위한 난독화 및 하드웨어 토큰 바인딩이 적용되어 있습니다.
+- **보안 협력:** 기술 실사가 필요한 글로벌 파트너사는 란더 공식 채널을 통해 NDA 체결 후 기술 검증을 진행할 수 있습니다.
 
 ## 💼 비즈니스 모델 및 IP 라이선싱 스펙
-본 레포지토리는 단순 포트폴리오용 웹사이트 소스코드가 아니며, 원천 기술을 시장에 종속시키는 **클라우드 플랫폼 인프라 아키텍처 설계 자산**입니다.
+본 프로젝트는 단순 포트폴리오용 웹사이트 소스코드가 아니며, 원천 기술을 시장에 종속시키는 **클라우드 플랫폼 인프라 아키텍처 설계 자산**입니다.
 
 - **Revenue Framework:** 사용자별 월간/연간 정기 구독(SaaS) 과금 모델 및 대형 파트너사용 엔터프라이즈 커스텀 API 공급 계약.
 - **IP Protection:** 원천 소프트웨어 보안 및 취약점 방어를 위해 웹 애플리케이션의 핵심 서버 분석 커널 코드는 완벽히 프라이빗 금고에 잠겨 작동합니다.
