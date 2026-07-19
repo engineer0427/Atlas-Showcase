@@ -1,7 +1,7 @@
-# 🚀 Atlas — AI-Powered Knowledge Mapping Platform (Landauer Internal Engine)
+# 🚀 Atlas — AI-Powered Knowledge Mapping Platform (SaaS)
 
 > **"AI로 지식을 그리다."** 
-> 데이터 사이의 숨겨진 연결점(**The Missing Link**)을 찾아 지식 구조를 시각화하고, 고도화된 시맨틱 분석을 제공하는 **란더(Landauer)의 지능형 R&D 지식 엔진**입니다.
+> 데이터 사이의 숨겨진 연결점(**The Missing Link**)을 찾아 지식 구조를 시각화하고, 고도화된 시맨틱 분석을 제공하는 **란더(Landauer)의 지능형 R&D 지식 엔진이자, SaaS 플랫폼**입니다.
 
 <p align="center">
   <img src="docs/AtlasImage.png" alt="Atlas Logo" width="400"/>
