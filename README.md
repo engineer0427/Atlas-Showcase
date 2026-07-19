@@ -4,7 +4,7 @@
 > 데이터 사이의 숨겨진 연결점(**The Missing Link**)을 찾아 지식 구조를 시각화하고, 고도화된 시맨틱 분석을 제공하는 지능형 지식 엔진입니다.
 
 <p align="center">
-  <img src="docs/ImageAtlas.png" alt="Atlas Logo" width="400"/>
+  <img src="docs/AtlasImage.png" alt="Atlas Logo" width="400"/>
 </p>
 
 <p align="center">
