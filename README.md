@@ -4,7 +4,7 @@
 > 데이터 사이의 숨겨진 연결점(**The Missing Link**)을 찾아 지식 구조를 시각화하고, 고도화된 시맨틱 분석을 제공하는 지능형 지식 엔진입니다.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/engineer0427/Atlas/main/docs/AtlasImage.png" alt="Atlas Logo" width="400"/>
+  <img src="docs/ImageAtlas.png" alt="Atlas Logo" width="400"/>
 </p>
 
 <p align="center">
@@ -13,8 +13,18 @@
   </a>
   <img src="https://img.shields.io/badge/Commits-1000%2B_In_Progress-orange?style=for-the-badge" alt="Commits"/>
   <img src="https://img.shields.io/badge/Status-Active_Development-green?style=for-the-badge" alt="Status"/>
-  <img src="https://img.shields.io/badge/Copyright-Registered-red?style=for-the-badge" alt="Copyright"/>
+  <img src="https://img.shields.io/badge/Property_of-Landauer-blue?style=for-the-badge" alt="Landauer Property"/>
+  <img src="https://img.shields.io/badge/Core_Logic-Private_Secured-red?style=for-the-badge" alt="Security"/>
 </p>
+
+---
+
+## 🛡️ Intellectual Property & Proprietary Notice
+**본 레포지토리는 Atlas 엔진의 기능 검증용 쇼케이스(Public Showcase) 환경입니다.**
+
+* **소유권:** 본 프로젝트의 모든 원천 기술, 핵심 분석 로직, 시스템 아키텍처는 기술 지주회사 **란더(Landauer)**의 독점적 자산입니다.
+* **핵심 로직 보안:** 실제 운영되는 핵심 분석 커널 및 라이선싱 서버 코드는 보안을 위해 **란더(Landauer)의 폐쇄형 보안 인프라(Private Repository)** 내에서 엄격하게 관리되며, 본 레포지토리에는 노출되지 않습니다.
+* **법적 보호:** 제 C-2026-017559 호 (한국저작권위원회) 등록을 통해 법적 보호를 받으며, 무단 복제, 역공학, 상업적 도용 시 즉각적인 법적 조치가 취해집니다.
 
 ---
 
@@ -25,16 +35,6 @@ Atlas는 고도로 최적화된 AI 페어 프로그래밍 워크플로우를 통
 2. **Design-Driven Development (ADR)**: 코드 구현 전, 설계 의사결정(ADR)을 문서화합니다. 기술 부채를 최소화하고, 모든 수정 사항의 근거를 [`docs/adr/`](./docs/adr/)에서 관리합니다.
 3. **Implementation & Refinement**: Gemini와 기술적 토론을 거쳐 도출된 요구사항을 바탕으로, GitHub Copilot의 '맞춤형 지침'을 적용하여 코드 블록 단위로 문제를 완결합니다.
 4. **Standardized CI/CD**: 표준화된 Git 루틴을 통해 변경 사항을 커밋하고 무중단 배포를 자동화합니다.
-
----
-
-## 🛡️ Intellectual Property (IP)
-본 프로젝트의 원천 기술 및 핵심 분석 로직은 법적으로 보호받는 지식재산권입니다.
-
-* **Software Registration**: 제 C-2026-017559 호 (한국저작권위원회)
-* **Target**: Atlas Engine v1.4.2 (Core Logic & Visualization Algorithm)
-* **Rights Holder**: 한정우 (Jeongwoo Han) / Atlas Lab
-* **Registration Date**: 2026. 04. 07.
 
 ---
 
