@@ -81,5 +81,5 @@ Atlas는 란더의 R&D 과정에서 발생하는 파편화된 아이디어를 �
 ---
 
 ## 🌐 Contact & Resources
-- **Landauer Official Channel**: [문의 접수처]
-- **Architectural Records**: [`docs/adr/`](./docs/adr/)
+- **Landauer Official Channel:** [Submit an Inquiry (GitHub Issues)](https://github.com/engineer0427/Atlas/issues/new)
+- **Architectural Records:** [docs/adr/](docs/adr/)
