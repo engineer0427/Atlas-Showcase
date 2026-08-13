@@ -24,10 +24,19 @@
 
 ---
 
-## 🛠 Engineering Methodology: AI-Native SDLC
-Atlas는 고도로 최적화된 AI 페어 프로그래밍 워크플로우를 통해 개발 생산성과 코드의 논리적 무결성을 관리합니다. 란더의 모든 설계 의사결정은 아래의 ADR(Architectural Decision Records)을 통해 관리됩니다.
+## 🛠️ Engineering Methodology: AI-Native SDLC & Human-in-the-Loop
+이 프로젝트는 연구원의 주도적인 통제와 아키텍처 설계 하에 AI 파이프라인을 유기적으로 지휘하는 **Human-in-the-Loop 기반의 AI-Native SDLC** 프로세스를 통해 구축되었습니다. 단순한 코드 생성을 넘어, 시스템의 철학부터 검증까지 전 개발 주기를 엄격하게 오케스트레이션하여 논리적 무결성을 극대화했습니다.
 
-* **[docs/adr/](./docs/adr/):** 기술 부채를 최소화하고, 모든 수정 사항의 근거를 기록한 설계 의사결정 문서.
+* **1. Ideation & Conceptualization (개념 설계 및 아키텍처 오케스트레이션)**
+  * 핵심 이론 및 알고리즘의 수학적/논리적 뼈대를 연구원이 직접 설계하고, AI 파이프라인을 통해 구조적 아이디어를 정밀하게 확장하여 시스템의 설계를 완벽하게 통제했습니다.
+* **2. Controlled Implementation & Co-Coding (정밀 통제 기반 구현)**
+  * 주요 알고리즘 및 시스템 로직 구현 과정에서 AI를 페어 프로그래밍 엔진으로 활용하되, 모든 아키텍처 레이어와 핵심 로직은 연구원의 엄격한 코드 리뷰와 주도적 통제 하에 무결하게 작성되었습니다.
+* **3. Iterative Refinement & Scaling (시뮬레이션 및 피드백 기반 고도화)**
+  * 다양한 환경에서의 시뮬레이션 및 벤치마크 데이터를 피드백 루프에 지속적으로 반영하며, 시스템의 성능과 확장성을 극한까지 담금질하여 최적화된 결과물을 도출했습니다.
+* **4. Red-Teaming & System Integrity Enforcement (레드티밍 및 무결성 사수)**
+  * 잠재적인 에지 케이스와 시스템 취약점을 선제적으로 타격하고 방어하는 **엄격한 다중 논리 검증(Red-Teaming)**을 수행하여, 극한의 부하 환경에서도 흔들리지 않는 시스템 무결성(Integrity)을 완벽하게 사수했습니다.
+* **5. Architectural Decision Records (ADR 기반 설계 관리)**
+  * 이 프로젝트의 모든 핵심 설계 의사결정은 **[docs/adr/](./docs/adr/)**을 통해 관리되며, 기술 부채를 최소화하고 모든 수정 사항의 아키텍처적 근거를 투명하게 기록합니다.
 
 ---
 
