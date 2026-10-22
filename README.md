@@ -1,94 +1,52 @@
-# 🚀 Atlas — AI-Powered Knowledge Mapping Platform (SaaS)
+# Atlas
 
-> **"AI로 지식을 그리다."** 
-> 데이터 사이의 숨겨진 연결점(**The Missing Link**)을 찾아 지식 구조를 시각화하고, 고도화된 시맨틱 분석을 제공하는 **란더(Landauer)의 지능형 R&D 지식 엔진이자, SaaS 플랫폼**입니다.
+**논문·특허 같은 문서들을 의미로 이어, 서로 연결되지 않은 빈자리를 찾아보는 개인 연구·개발 프로젝트**
 
-<p align="center">
-  <img src="docs/AtlasImage.png" alt="Atlas Logo" width="400"/>
-</p>
+> 상태: 리팩터링 중. 기존 코드를 정리하고 안정화하는 단계이며, 핵심 기능(빈자리 탐지)은 아직 검증 전이다.
+> 이 저장소는 프로젝트 소개용이며, 소스코드는 비공개 저장소에서 관리한다.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Internal_R&D_Tool-purple?style=for-the-badge" alt="Status"/>
-  <img src="https://img.shields.io/badge/Property_of-Landauer-blue?style=for-the-badge" alt="Landauer Property"/>
-  <img src="https://img.shields.io/badge/Core_Logic-Private_Secured-red?style=for-the-badge" alt="Security"/>
-</p>
+- 오픈소스 라이브러리: [`atlas-research`](https://pypi.org/project/atlas-research/) (PyPI, Apache-2.0)
+- 프로그램 저작권 등록: 한국저작권위원회 제 C-2026-017559 호
+- 개발: 한정우 (개인 브랜드 란더, Landauer)
 
----
+## 무엇을 하려는가
 
-## 🛡️ Intellectual Property & Proprietary Notice
-**본 레포지토리는 란더(Landauer)의 핵심 아이디어 개발 및 지식 구조화 플랫폼인 'Atlas'의 공개 쇼케이스 및 오픈소스 배포 환경입니다.**
+연구 아이디어나 기술 설명을 입력하면, 관련된 논문과 특허를 찾아 하나의 그래프로 보여 주고,
+**한쪽에만 있고 아직 이어지지 않은 영역**을 드러내는 것이 목표다.
 
-* **메타 IP 소유권:** 본 프로젝트의 모든 원천 아키텍처, 분석 로직, 시스템 블루프린트는 메타 IP 라이선서 **란더(Landauer)**의 독점적 자산입니다.
-* **법적 보호 및 공신력:** 본 소프트웨어는 **한국저작권위원회 저작권 등록 (제 C-2026-017559 호)**을 통해 공식적으로 보호되며, 무단 복제, 역공학, 상업적 도용 시 엄격한 법적 조치가 적용됩니다.
-* **Open-Source Distribution:** 핵심 분석 모듈은 독립 오픈소스 라이브러리 [**`atlas-research`**](https://pypi.org/project/atlas-research/)를 통해 공식 배포되어 전 세계 연구자들의 투명한 교차 검증을 지원합니다.
-  
----
+- 문서를 의미 임베딩으로 바꿔 벡터 검색으로 가까운 문서를 찾는다.
+- 문서들을 이종 그래프(논문, 특허 등)로 엮는다.
+- 서로 다른 묶음을 잇는 문서와, 이어지지 않은 빈자리를 찾는다.
 
-## 🛠️ Engineering Methodology: AI-Native SDLC & Human-in-the-Loop
-이 프로젝트는 연구원의 주도적인 통제와 아키텍처 설계 하에 AI 파이프라인을 유기적으로 지휘하는 **Human-in-the-Loop 기반의 AI-Native SDLC** 프로세스를 통해 구축되었습니다. 단순한 코드 생성을 넘어, 시스템의 철학부터 검증까지 전 개발 주기를 엄격하게 오케스트레이션하여 논리적 무결성을 극대화했습니다.
+논문과 특허 사이의 빈자리를 찾는 방법 자체는 학술 연구로 이미 제안되어 있다.
+Atlas 는 이를 누구나 쓸 수 있는 도구로 만드는 것을 목표로 한다.
 
-* **1. Ideation & Conceptualization (개념 설계 및 아키텍처 오케스트레이션)**
-  * 핵심 이론 및 알고리즘의 수학적/논리적 뼈대를 연구원이 직접 설계하고, AI 파이프라인을 통해 구조적 아이디어를 정밀하게 확장하여 시스템의 설계를 완벽하게 통제했습니다.
-* **2. Controlled Implementation & Co-Coding (정밀 통제 기반 구현)**
-  * 주요 알고리즘 및 시스템 로직 구현 과정에서 AI를 페어 프로그래밍 엔진으로 활용하되, 모든 아키텍처 레이어와 핵심 로직은 연구원의 엄격한 코드 리뷰와 주도적 통제 하에 무결하게 작성되었습니다.
-* **3. Iterative Refinement & Scaling (시뮬레이션 및 피드백 기반 고도화)**
-  * 다양한 환경에서의 시뮬레이션 및 벤치마크 데이터를 피드백 루프에 지속적으로 반영하며, 시스템의 성능과 확장성을 극한까지 담금질하여 최적화된 결과물을 도출했습니다.
-* **4. Red-Teaming & System Integrity Enforcement (레드티밍 및 무결성 사수)**
-  * 잠재적인 에지 케이스와 시스템 취약점을 선제적으로 타격하고 방어하는 **엄격한 다중 논리 검증(Red-Teaming)**을 수행하여, 극한의 부하 환경에서도 흔들리지 않는 시스템 무결성(Integrity)을 완벽하게 사수했습니다.
-* **5. Architectural Decision Records (ADR 기반 설계 관리)**
-  * 이 프로젝트의 모든 핵심 설계 의사결정은 **[docs/adr/](./docs/adr/)**을 통해 관리되며, 기술 부채를 최소화하고 모든 수정 사항의 아키텍처적 근거를 투명하게 기록합니다.
+## 구성
 
----
+| 구성 | 기술 |
+|---|---|
+| 프런트엔드 | Next.js |
+| 백엔드 | FastAPI |
+| 저장·검색 | PostgreSQL + pgvector (Neon) |
+| 임베딩 | OpenAI `text-embedding-3-small` (운영), 로컬 모델 지원은 검토 중 |
 
-## 🧭 Vision: Internal Knowledge Compass
-> **기술적 특이점 이후의 지식 나침반**
+설계 결정은 [`docs/adr`](docs/adr) 에 기록하고 있다.
 
-Atlas는 란더의 R&D 과정에서 발생하는 파편화된 아이디어를 란더의 기술 자산으로 구조화하는 지능형 내비게이터로 진화하고 있습니다. 이종 데이터 간의 시맨틱 관계를 발견하고 **지식 전이(Knowledge Transfer)**의 경로를 제시합니다.
+## 진행 상황
 
----
+- [x] 운영 서버 설정 정리 (인증 키 검사, 의존성 버전 정리)
+- [x] `/api/analyze` 를 임베딩과 검색 파이프라인에 연결하고, 오류를 숨기지 않도록 정리
+- [ ] 프런트엔드와 API 요청 형식 맞추기
+- [ ] 라이브러리 패키징 정리 (공개 API 가 설치 상태에서 동작하도록)
+- [ ] 테스트용 문헌 데이터 구축
+- [ ] 첫 벤치마크: 사람이 직접 찾은 선행문헌을 Atlas 가 찾아내는지 측정
 
-## 🧩 Core Value: The "Missing Link"
-- **Heterogeneous Graph Modeling**: 논문, 특허, 기술 문서 등 이종 데이터를 **Graph Data Structure**로 구조화하여 란더의 기술 위계와 관계를 정의합니다.
-- **Bridge Score Algorithm**: 도메인 간 유사도를 계산하기 위해 **Cosine Similarity**와 자체 개발한 **Heuristic** 가중치 로직을 결합, 최단 연결 경로를 탐색합니다.
-- **High-Dimensional Visualization**: 고차원 벡터 임베딩 데이터를 3D 지형도로 시각화하여 정보의 논리적 흐름을 직관적으로 탐색하게 합니다.
+## 원칙
 
----
+- 측정하지 않은 성능은 쓰지 않는다.
+- 계획과 완료를 구분해서 쓴다.
+- Atlas 의 결과는 검토를 돕는 자료이며, 특허 가능성이나 침해 여부에 대한 법적 판단이 아니다.
 
-## 🛠 Engineering Highlights
+## 수정 이력
 
-### 1. CS-Driven Technical Challenges
-- **Vector Indexing & Semantic Search**: **pgvector**와 **IVFFlat/HNSW 인덱싱** 기법을 적용하여 대규모 임베딩 데이터셋에서 $O(\log N)$ 수준의 저지연(Low-latency) 검색 구현.
-- **Asynchronous Pipeline Optimization**: **FastAPI**의 `async/await` 패턴으로 I/O Bound 작업 병목을 제거하고, **Concurrency(동시성)** 처리를 통해 Throughput을 극대화.
-- **SSR Hydration Consistency**: Next.js의 렌더링 생명주기를 고려한 **isMounted 패턴** 적용으로 클라이언트 사이드 지표의 무결성 확보.
-
-### 2. Scalability & Continuous Delivery
-- **Serverless AI Architecture**: **Koyeb**을 연동하여 트래픽에 따라 탄력적으로 확장되는 분석 엔진 아키텍처 설계.
-- **PyPI Open Source Distribution**: 핵심 로직을 독립 라이브러리인 [**`atlas-research`**](https://pypi.org/project/atlas-research/)로 배포하여 기술적 재사용성과 모듈화를 실현.
-- **Automated CI/CD**: GitHub Actions를 통한 무중단 배포 및 **1,000회 이상의 점진적 커밋**으로 시스템 안정성 유지.
-
----
-
-## 🏗 System Architecture
-
-**Presentation Layer** (Next.js/React)   
-↓   
-**Application Layer** (FastAPI/Python - RESTful API)   
-↓   
-**Data Persistence Layer** (Neon DB/pgvector - Hybrid Storage)
-
----
-
-## 🎯 Development Status & Roadmap
-* **Current Status**: **[Maintenance & Optimization]** 
-  현재 시스템 고도화를 위한 분석 페이지 렌더링 로직 최적화 작업이 진행 중입니다. 란더의 내부 연구 환경에 맞춰 안정성을 최우선으로 개선하고 있습니다.
-
-- [x] **Core Engine v1.4.2 저작권 등록 완료 (2026-04-07)**
-- [x] **Internal Tooling**: 란더 아이디어 개발을 위한 워크플로우 이식 완료
-- [ ] **Rendering Optimization**: 분석 페이지 렌더링 지연 및 하이드레이션 오류 수정 (In-Progress)
-- [ ] **Semantic Discovery**: 지식 간의 비정형 연결점 추천 알고리즘 고도화
-
----
-
-## 🌐 Contact & Resources
-- **Landauer Official Channel:** [Submit an Inquiry (GitHub Issues)](https://github.com/engineer0427/Atlas/issues/new)
-- **Architectural Records:** [docs/adr/](docs/adr/)
+- 2026-10: 이전 README 의 근거 없는 표현(규모, 완성도, 성능에 관한 서술)을 걷어 내고 현재 상태 기준으로 다시 썼다.
