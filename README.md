@@ -12,7 +12,7 @@
 
 <!-- TODO(사용자): 문헌 지도 스크린샷을 넣는다. 가상 예시 데이터로 캡처하고, 실제 사용자 입력은 쓰지 않는다. -->
 <p align="center">
-  <img src="docs/images/atlas-map-example.png" alt="문헌 지도 화면 예시" width="720">
+  <img src="docs/atlas-map-example.png" alt="문헌 지도 화면 예시" width="720">
   <br>
   <em>문헌 지도 화면 (가상 예시 데이터)</em>
 </p>
