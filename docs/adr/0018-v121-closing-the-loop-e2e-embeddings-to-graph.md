@@ -1,4 +1,4 @@
-# 0017: Closing the Loop (E2E embeddings-to-graph integration)
+# 0018: Closing the Loop (E2E embeddings-to-graph integration)
 
 ## Status
 Proposed

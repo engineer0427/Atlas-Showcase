@@ -5,7 +5,7 @@
 - Authors: engineer0427
 
 ## Context
-EngineFacade가 특정 저장소(arXiv)에 직접 의존하고 있고, summarizer는 대표 논문 기반의 단순 요약만 제공합니다. 상용화(프로 서비스)를 위해서는 여러 저장소(bioRxiv, SSRN 등) 확장성, 저장소별 정규화·중복 제거, 그리고 유료 사용자에게 제공할 "심층 비판적 인사이트(DeepInsight)"가 필요합니다.
+EngineFacade가 특정 저장소(arXiv)에 직접 의존하고 있고, summarizer는 대표 논문 기반의 단순 요약만 제공합니다. [비공개: 사업 관련]을 위해서는 여러 저장소(bioRxiv, SSRN 등) 확장성, 저장소별 정규화·중복 제거, 그리고 "심층 비판적 인사이트(DeepInsight)"가 필요합니다. [비공개: 제공 대상]
 
 ## Decision
 1. Provider 패턴 도입
@@ -29,10 +29,10 @@ EngineFacade가 특정 저장소(arXiv)에 직접 의존하고 있고, summarize
    - pipeline이나 provider로 얻은 papers에 대해 `summarize_clusters`와 `DeepInsightGenerator.generate_for_clusters`를 호출하여 응답에 `insights` 필드로 포함
 
 4. 프론트엔드 정책
-   - `insights.deep`를 렌더링하되 `user.plan !== 'pro'`일 경우 블러 처리 및 Pro 업그레이드 CTA 노출
+   - `insights.deep`를 렌더링한다. [비공개: 이용 등급별 정책]
 
 ## Consequences
-- 장점: 저장소 추가 시 Facade 수정 불필요, Provider마다 타임아웃·레이트리밋·정규화 적용 가능, 유료용 고급 인사이트 제공으로 제품 차별화
+- 장점: 저장소 추가 시 Facade 수정 불필요, Provider마다 타임아웃·레이트리밋·정규화 적용 가능 [비공개: 사업 관련]
 - 단점: LLM 비용·지연(캐싱/비동기 권장), 초기 구현·테스트 비용 증가, LLM 출력 신뢰성 문제(증거·confidence 병기 필요)
 
 ## Implementation Notes
@@ -44,15 +44,15 @@ EngineFacade가 특정 저장소(arXiv)에 직접 의존하고 있고, summarize
 - 변경 파일:
   - backend/engine/facade.py (providers 사용하도록 변경)
   - backend/engine/summarizer.py (DeepInsightGenerator 추가)
-  - frontend: Analyze 뷰에서 `insights.deep` 렌더링 및 Pro 락 UI 구현
+  - frontend: Analyze 뷰에서 `insights.deep` 렌더링 [비공개: 이용 등급별 화면]
 - 운영 권장:
   - DeepInsight는 캐싱/비동기 처리
   - Provider별 telemetry(응답시간·실패율) 도입
-  - LLM 호출 비용 모니터링 및 요금제별 제한
+  - LLM 호출 비용 모니터링 [비공개: 이용 등급별 제한]
 
 ## Migration plan (단계 요약)
 1. providers 패키지와 BaseProvider 추가, ArxivProvider 구현
 2. EngineFacade에서 provider 기반 fetch 사용으로 전환 (ATLAS_PROVIDERS로 제어)
 3. summarizer에 DeepInsightGenerator 추가 (먼저 heuristic 폴백 구현)
-4. 프론트엔드 DeepInsight 렌더/Pro 잠금 적용
+4. 프론트엔드 DeepInsight 렌더 [비공개: 이용 등급별 화면]
 5. 테스트·모니터링·점진 롤아웃

@@ -4,7 +4,7 @@
 채택됨
 
 ## 맥락 (Context)
-- 클라이언트(`https://atlaslab.app`)와 서버(`https://atlas-backend.koyeb.app`) 간 CORS 이슈가 발생.
+- 클라이언트(`https://atlaslab.app`)와 서버([비공개: 백엔드 주소]) 간 CORS 이슈가 발생.
 - 기존 FastAPI 엔드포인트에서 `/me` URL이 404 오류를 반환.
 - 프론트엔드의 Axios 요청에 대해 401 인증 실패 및 네트워크 에러 현상 지속.
 
@@ -20,7 +20,7 @@
    - 401 에러와 잘못된 요청을 명확히 로그로 남기기.
 
 3. **프론트엔드 요청 검증**:
-   - `frontend/utils/api.js`의 기본 API Base URL 확인(이 문제 중 환경 설정과의 일치도 고려 필요). 기본값: `https://atlas-backend.koyeb.app`.
+   - `frontend/utils/api.js`의 기본 API Base URL 확인(이 문제 중 환경 설정과의 일치도 고려 필요). 기본값: [비공개: 백엔드 주소].
    - 각 프론트엔드 Axios 함수에서 전달하는 헤더(예: Content-Type, Authorization)가 올바르게 적용되었는지 검토.
 
 ## 결과 (Consequences)
